@@ -8,8 +8,9 @@
 <style>
 
     body {
+        padding-top: 50px;
         font-family: "Roboto";
-        overflow: hidden;
+        overflow-y: scroll;
     }
 
     header {
@@ -17,7 +18,9 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        position: fixed;
+        position:fixed;
+        margin: 0;
+        padding: 0;
         height: 35px;
         width: 100%;
         top: 0;
@@ -25,7 +28,7 @@
         background-color: #024bc6;
     }
 
-    .header-button {
+    .explore-button {
         height: 35px;
         width: 60px;
         background-color:#024bc6;
@@ -35,21 +38,176 @@
         border-radius: 10px;
     }
 
-    .header-button:hover {
+    .explore-button:hover {
         height: 35px;
         width: 60px;
         background-color:#c7c7c7;
         color: white;
         font-family: "Roboto";
         border: none;
+    }
+
+    .search-bar {
+        height: 25px;
+        width: 25%;
+        background-color:#d0d0d0;
+        color: gray;
+        font-family: "Roboto";
+        border: none;
         border-radius: 10px;
     }
+
+    
+    .signup-button {
+        height: 35px;
+        width: 60px;
+        background-color:#024bc6;
+        color: white;
+        font-family: "Roboto";
+        border: none;
+        border-radius: 10px;
+    }
+
+
+    .signup-button:hover {
+        height: 35px;
+        width: 60px;
+        background-color:#c7c7c7;
+        color: white;
+        font-family: "Roboto";
+        border: none;
+    }
+
+    .login-button {
+        height: 35px;
+        width: 60px;
+        background-color:#024bc6;
+        color: white;
+        font-family: "Roboto";
+        border: none;
+        border-radius: 10px;
+    }
+
+    .login-button:hover {
+        height: 35px;
+        width: 60px;
+        background-color:#c7c7c7;
+        color: white;
+        font-family: "Roboto";
+        border: none;
+    }
+
+    .game-events {
+        align-content: center;
+        height: 5.5rem;
+        width: 98.15%;
+        background-color: #e5e5e5;
+        color: black;
+        font-family: "Roboto";
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        box-shadow: 4px black;
+        margin-bottom: 1rem;
+    }
+
+    .game-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: none;
+        height: 4rem;
+        width: 4rem;
+        background-color: #eeeded;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .game-icon:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: none;
+        height: 4rem;
+        width: 4rem;
+        background-color: #dcdbdb;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .play-btn {
+        height: 1rem;
+        width: 1rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+
+    footer nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        color:#024bc6;
+    }
+
+    footer nav li {
+        margin: 0 10px;
+    }
+
 </style>
 </head>
 <body>
     <header>
         <img src="gogame_logo.jpg" alt="logo" width="35px" height="35px">
-        <button class="header-button">Explore</button>
+        <button class="explore-button">Explore</button>
+        <input type="text" class="search-bar" placeholder="Search">
+        <button class="signup-button">Sign Up</button>
+        <button class="login-button">Log In</button>
     </header>
+
+    <div class="game-events">
+         The first time
+        <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <div class="game-events">
+          Trending on GoGame
+          <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <div class="game-events">
+            Because you played... 
+            <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <div class="game-events">
+            Continue Playing
+            <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <div class="game-events">
+            Recommended must plays 
+            <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <div class="game-events">
+            Weekly community curations
+            <div class="game-icon" style="align-content: center;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00b3ff"><path d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm351-360q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Z"/></svg></div>
+        </div>
+
+        <footer>
+            <img src="gogame_logo.jpg" alt="logo" height="100px;" width="100px;"><p>&copy; 2024 GoGame. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#">Terms of service</a></li>
+                </ul>
+            </nav>
+        </footer>
 </body>
 </html>
+
